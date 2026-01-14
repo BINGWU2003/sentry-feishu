@@ -1,16 +1,16 @@
 const express = require("express");
 const axios = require("axios");
 const app = express();
-
+const { config } = require("./config");
+const { FEISHU_WEBHOOK } = config;
+console.log(FEISHU_WEBHOOK);
 app.use(express.json());
 
 // 飞书机器人的 Webhook 地址 (建议放到环境变量)
-const FEISHU_WEBHOOK =
-  "https://open.feishu.cn/open-apis/bot/v2/hook/c3f0537e-533a-4738-8113-3945aa1d5662";
 
 app.post("/sentry", async (req, res) => {
   const { body } = req;
-
+  console.log(body);
   // 1. 简单的过滤：只发 Error 级别的报错
   if (body.level !== "error" && body.level !== "fatal") {
     return res.send("Ignored");
@@ -60,7 +60,8 @@ app.post("/sentry", async (req, res) => {
 
   // 4. 发送到飞书
   try {
-    await axios.post(FEISHU_WEBHOOK, cardContent);
+    console.log(cardContent);
+    await axios.post(config.FEISHU_WEBHOOK, cardContent);
     console.log("Sent to Feishu");
     res.status(200).send("OK");
   } catch (error) {
@@ -73,4 +74,4 @@ app.post("/sentry", async (req, res) => {
 module.exports = app;
 
 // 本地测试解开下面注释
-// app.listen(3000, () => console.log("Server running on port 3000"));
+app.listen(3000, () => console.log("Server running on port 3000"));
