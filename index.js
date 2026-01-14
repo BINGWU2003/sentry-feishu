@@ -70,8 +70,8 @@ app.post("/sentry", async (req, res) => {
   }
 });
 
-// Vercel 需要 export app
-module.exports = app;
-
-// 本地测试解开下面注释
-app.listen(3000, () => console.log("Server running on port 3000"));
+// 关键修改：监听 PORT 环境变量
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
