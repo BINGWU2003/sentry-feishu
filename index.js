@@ -12,9 +12,9 @@ app.post("/sentry", async (req, res) => {
   const { body } = req;
   console.log(body);
   // 1. 简单的过滤：只发 Error 级别的报错
-  if (body.level !== "error" && body.level !== "fatal") {
-    return res.send("Ignored");
-  }
+  // if (body.level !== "error" && body.level !== "fatal") {
+  //   return res.send("Ignored");
+  // }
 
   // 2. 提取关键信息
   const project = body.project_name || "My Project";
