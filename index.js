@@ -70,6 +70,9 @@ app.post("/sentry", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
 // 关键修改：监听 PORT 环境变量
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
