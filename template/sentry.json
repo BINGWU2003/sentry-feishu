@@ -1,0 +1,66 @@
+{
+  "action": "created",
+  "installation": {
+    "uuid": "d3803d4f-db11-4f1b-a103-1517198e560b"
+  },
+  "data": {
+    "issue": {
+      "url": "https://sentry.io/api/0/organizations/yunzhi/issues/7194002099/",
+      "web_url": "https://yunzhi.sentry.io/issues/7194002099/",
+      "project_url": "https://yunzhi.sentry.io/issues/?project=4510703106785280",
+      "id": "7194002099",
+      "shareId": null,
+      "shortId": "MES_WEB-23",
+      "title": "Error: tedasdasdasdsad松发的说法打撒芬是的fsfdst",
+      "culprit": "首页",
+      "permalink": "https://yunzhi.sentry.io/issues/7194002099/",
+      "logger": null,
+      "level": "error",
+      "status": "unresolved",
+      "statusDetails": {},
+      "substatus": "new",
+      "isPublic": false,
+      "platform": "javascript",
+      "project": {
+        "id": "4510703106785280",
+        "name": "mes_web",
+        "slug": "mes_web",
+        "platform": "javascript-vue"
+      },
+      "type": "error",
+      "metadata": {
+        "value": "tedasdasdasdsad松发的说法打撒芬是的fsfdst",
+        "type": "Error",
+        "in_app_frame_mix": "in-app-only",
+        "sdk": {
+          "name": "sentry.javascript.vue",
+          "name_normalized": "sentry.javascript.vue"
+        },
+        "initial_priority": 75
+      },
+      "numComments": 0,
+      "assignedTo": null,
+      "isBookmarked": false,
+      "isSubscribed": false,
+      "subscriptionDetails": null,
+      "hasSeen": false,
+      "annotations": [],
+      "issueType": "error",
+      "issueCategory": "error",
+      "priority": "high",
+      "priorityLockedAt": null,
+      "seerFixabilityScore": null,
+      "seerAutofixLastTriggered": null,
+      "isUnhandled": true,
+      "count": "1",
+      "userCount": 1,
+      "firstSeen": "2026-01-16T05:06:47.236000+00:00",
+      "lastSeen": "2026-01-16T05:06:47.236000+00:00"
+    }
+  },
+  "actor": {
+    "type": "application",
+    "id": "sentry",
+    "name": "Sentry"
+  }
+}
