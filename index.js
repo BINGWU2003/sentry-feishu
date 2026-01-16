@@ -21,6 +21,7 @@ app.post("/sentry", async (req, res) => {
   let project, title, url, level, shortId, time;
   let errorMessage, errorType, culprit, platform, sdk;
   let count, userCount, priority, isUnhandled, status;
+  let errorLocation = ""; // 文件名和行号信息
 
   // 场景 A: Issue Created 事件
   if (body.data && body.data.issue) {
@@ -44,6 +45,19 @@ app.post("/sentry", async (req, res) => {
     platform = issue.platform || "javascript";
     sdk = meta.sdk?.name_normalized || "未知SDK";
 
+    // 提取文件名和行号
+    if (meta.filename) {
+      errorLocation = meta.filename;
+      if (meta.lineno) {
+        errorLocation += `:${meta.lineno}`;
+      }
+      if (meta.function) {
+        errorLocation += ` (${meta.function})`;
+      }
+    } else {
+      errorLocation = "报错行数未知（请检查是否开启 SourceMap）";
+    }
+
     // 统计信息
     count = issue.count || "1";
     userCount = issue.userCount || 1;
@@ -62,6 +76,7 @@ app.post("/sentry", async (req, res) => {
     errorMessage = body.message || title;
     errorType = "Alert";
     culprit = body.event?.culprit || "未知位置";
+    errorLocation = "报错行数未知（请检查是否开启 SourceMap）";
   }
 
   // 颜色逻辑
@@ -82,6 +97,7 @@ app.post("/sentry", async (req, res) => {
     `**🐛 错误类型:** ${errorType}`,
     `**📝 错误信息:** ${errorMessage}`,
     `**📍 报错位置:** ${culprit}`,
+    `**📄 代码行数:** ${errorLocation}`,
   ];
 
   // 如果有统计信息，添加统计行
@@ -113,6 +129,46 @@ app.post("/sentry", async (req, res) => {
   // 添加时间
   contentLines.push(`**🕐 发生时间:** ${time}`);
 
+  // 构建卡片元素
+  const cardElements = [
+    {
+      tag: "div",
+      text: {
+        tag: "lark_md",
+        content: contentLines.join("\n"),
+      },
+    },
+  ];
+
+  // 如果没有行号信息，添加 SourceMap 提示
+  if (errorLocation.includes("报错行数未知")) {
+    cardElements.push({
+      tag: "div",
+      text: {
+        tag: "lark_md",
+        content:
+          "💡 **提示：** 无法获取具体报错行数，建议检查项目配置：\n- 确保构建时开启了 SourceMap\n- 确保已上传 SourceMap 到 Sentry",
+      },
+    });
+  }
+
+  cardElements.push(
+    {
+      tag: "hr",
+    },
+    {
+      tag: "action",
+      actions: [
+        {
+          tag: "button",
+          text: { tag: "plain_text", content: "🔍 查看详情" },
+          url: url,
+          type: "primary",
+        },
+      ],
+    }
+  );
+
   const cardContent = {
     msg_type: "interactive",
     card: {
@@ -124,29 +180,7 @@ app.post("/sentry", async (req, res) => {
         },
         template: colorTemplate,
       },
-      elements: [
-        {
-          tag: "div",
-          text: {
-            tag: "lark_md",
-            content: contentLines.join("\n"),
-          },
-        },
-        {
-          tag: "hr",
-        },
-        {
-          tag: "action",
-          actions: [
-            {
-              tag: "button",
-              text: { tag: "plain_text", content: "🔍 查看详情" },
-              url: url,
-              type: "primary",
-            },
-          ],
-        },
-      ],
+      elements: cardElements,
     },
   };
 
