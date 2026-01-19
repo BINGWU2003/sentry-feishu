@@ -1,0 +1,633 @@
+{
+  "action": "created",
+  "installation": {
+    "uuid": "d3803d4f-db11-4f1b-a103-1517198e560b"
+  },
+  "data": {
+    "error": {
+      "event_id": "f315828a6e7d4d69afb1c68c2c3b3d68",        
+      "project": 4510703106785280,
+      "release": "mes_web@1.0.1-test",
+      "dist": null,
+      "platform": "javascript",
+      "message": "",
+      "datetime": "2026-01-19T06:56:35.449000+00:00",        
+      "tags": [
+        [
+          "app_type",
+          "admin_dashboard"
+        ],
+        [
+          "browser",
+          "Chrome 143.0.0"
+        ],
+        [
+          "browser.name",
+          "Chrome"
+        ],
+        [
+          "environment",
+          "test"
+        ],
+        [
+          "handled",
+          "no"
+        ],
+        [
+          "level",
+          "error"
+        ],
+        [
+          "mechanism",
+          "auto.browser.global_handlers.onunhandledrejection"
+        ],
+        [
+          "os",
+          "Windows >=10"
+        ],
+        [
+          "os.name",
+          "Windows"
+        ],
+        [
+          "replayId",
+          "a86ed9eca274447a8ab627272633625f"
+        ],
+        [
+          "release",
+          "mes_web@1.0.1-test"
+        ],
+        [
+          "transaction",
+          "通知公告,1123598815738675202"
+        ],
+        [
+          "url",
+          "http://192.168.0.202:2888/desk/notice"
+        ]
+      ],
+      "_dsc": {
+        "environment": "test",
+        "org_id": "4510707044843520",
+        "public_key": "2a8d2557223f93677171734b6d6e054f",
+        "release": "mes_web@1.0.1-test",
+        "replay_id": "a86ed9ec-a274-447a-8ab6-27272633625f",
+        "sample_rand": "0.47580737167160636",
+        "sample_rate": "1.0",
+        "sampled": true,
+        "trace_id": "2ff87f5dc5824c9d81c9f60224df3d4b",
+        "transaction": "通知公告,1123598815738675202"
+      },
+      "_metrics": {
+        "bytes.ingested.event": 7892,
+        "bytes.stored.event": 12262
+      },
+      "_ref": 4510703106785280,
+      "_ref_version": 2,
+      "breadcrumbs": {
+        "values": [
+          {
+            "timestamp": 1768805787.439,
+            "type": "default",
+            "category": "navigation",
+            "level": "info",
+            "data": {
+              "from": "/mes/exportWorkData/index",
+              "to": "/mes/exportWorkData/index"
+            }
+          },
+          {
+            "timestamp": 1768805790.486,
+            "type": "default",
+            "category": "sentry.transaction",
+            "level": "info",
+            "message": "1c1a2524539a451a96168672aebddbef",
+            "event_id": "1c1a2524539a451a96168672aebddbef"
+          },
+          {
+            "timestamp": 1768805792.656,
+            "type": "default",
+            "category": "navigation",
+            "level": "info",
+            "data": {
+              "from": "/mes/exportWorkData/index",
+              "to": "/wel/tenantWorkbench"
+            }
+          },
+          {
+            "timestamp": 1768805792.803,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 189,
+              "status_code": 200,
+              "url": "/api/common/frontConfigProperties/getFrontConfigProperties"
+            }
+          },
+          {
+            "timestamp": 1768805792.886,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 58,
+              "status_code": 200,
+              "url": "/api/blade-iot/device/getDeviceSum"
+            }
+          },
+          {
+            "timestamp": 1768805792.887,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 58,
+              "status_code": 200,
+              "url": "/api/blade-system/menu/top-menu"
+            }
+          },
+          {
+            "timestamp": 1768805792.887,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 11361,
+              "status_code": 200,
+              "url": "/api/blade-system/tenant/list4Login/2"
+            }
+          },
+          {
+            "timestamp": 1768805792.888,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 126856,
+              "status_code": 200,
+              "url": "/api/blade-system/menu/routes"
+            }
+          },
+          {
+            "timestamp": 1768805792.916,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 57,
+              "status_code": 200,
+              "url": "/api/blade-iot/device/getNumOfStatusDevices?deviceStatus=1"
+            }
+          },
+          {
+            "timestamp": 1768805792.918,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 57,
+              "status_code": 200,
+              "url": "/api/blade-iot/device/getDeviceTenantSum"
+            }
+          },
+          {
+            "timestamp": 1768805792.918,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 57,
+              "status_code": 200,
+              "url": "/api/blade-system/tenant/getActiveTenantSum"
+            }
+          },
+          {
+            "timestamp": 1768805793.071,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 58,
+              "status_code": 200,
+              "url": "/api/blade-iot/device/getNumOfTypeDevices?deviceType=device"
+            }
+          },
+          {
+            "timestamp": 1768805793.091,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 57,
+              "status_code": 200,
+              "url": "/api/blade-iot/device/getNumOfTypeDevices?deviceType=gateway"
+            }
+          },
+          {
+            "timestamp": 1768805793.093,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 85,
+              "status_code": 200,
+              "url": "/api/blade-system/tenant/getTenantSum"
+            }
+          },
+          {
+            "timestamp": 1768805793.101,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 57,
+              "status_code": 200,
+              "url": "/api/blade-iot/device/getNumOfStatusDevices?deviceStatus=1"
+            }
+          },
+          {
+            "timestamp": 1768805793.129,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 126856,
+              "status_code": 200,
+              "url": "/api/blade-system/menu/routes"
+            }
+          },
+          {
+            "timestamp": 1768805793.148,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 375,
+              "status_code": 200,
+              "url": "/api/blade-system/tenant/proportionOfCityAndIndustryClassification"
+            }
+          },
+          {
+            "timestamp": 1768805793.219,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 173,
+              "status_code": 200,
+              "url": "/api/common/tenantNum/numOfModuleTenants"
+            }
+          },
+          {
+            "timestamp": 1768805793.221,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 445174,
+              "status_code": 200,
+              "url": "/api/blade-system/menu/buttons"
+            }
+          },
+          {
+            "timestamp": 1768805793.319,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 445174,
+              "status_code": 200,
+              "url": "/api/blade-system/menu/buttons"
+            }
+          },
+          {
+            "timestamp": 1768805794.324,
+            "type": "default",
+            "category": "sentry.transaction",
+            "level": "info",
+            "message": "4d08006d9fad40cba37f31bf6cbe1ef8",
+            "event_id": "4d08006d9fad40cba37f31bf6cbe1ef8"
+          },
+          {
+            "timestamp": 1768805794.78,
+            "type": "default",
+            "category": "ui.click",
+            "level": "info",
+            "message": "ul.el-menu.el-menu--horizontal.top-menu > li.el-menu-item > span"
+          },
+          {
+            "timestamp": 1768805794.845,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 126856,
+              "status_code": 200,
+              "url": "/api/blade-system/menu/routes"
+            }
+          },
+          {
+            "timestamp": 1768805794.98,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 445174,
+              "status_code": 200,
+              "url": "/api/blade-system/menu/buttons"
+            }
+          },
+          {
+            "timestamp": 1768805795.252,
+            "type": "default",
+            "category": "ui.click",
+            "level": "info",
+            "message": "ul.el-menu.el-menu--vertical > li.el-menu-item > span[alt=\"/desk/notice\"]"
+          },
+          {
+            "timestamp": 1768805795.261,
+            "type": "default",
+            "category": "navigation",
+            "level": "info",
+            "data": {
+              "from": "/wel/tenantWorkbench",
+              "to": "/desk/notice"
+            }
+          },
+          {
+            "timestamp": 1768805795.415,
+            "type": "default",
+            "category": "sentry.event",
+            "level": "error",
+            "message": "TypeError: Cannot destructure property 'item' of 'undefined' as it is undefined.",
+            "event_id": "26bb1a80f5bb46cc8f7e9708d7a21d1e"
+          },
+          {
+            "timestamp": 1768805795.429,
+            "type": "http",
+            "category": "xhr",
+            "level": "warning",
+            "data": {
+              "method": "GET",
+              "response_body_size": 187,
+              "status_code": 404,
+              "url": "/api/blade-desk/notice/list?current=1&size=10"
+            }
+          },
+          {
+            "timestamp": 1768805795.44,
+            "type": "http",
+            "category": "xhr",
+            "level": "info",
+            "data": {
+              "method": "GET",
+              "response_body_size": 1191,
+              "status_code": 200,
+              "url": "/api/blade-system/dict/dictionary?code=notice"
+            }
+          }
+        ]
+      },
+      "contexts": {
+        "browser": {
+          "browser": "Chrome 143.0.0",
+          "name": "Chrome",
+          "version": "143.0.0",
+          "type": "browser"
+        },
+        "os": {
+          "os": "Windows >=10",
+          "name": "Windows",
+          "version": ">=10",
+          "type": "os"
+        },
+        "replay": {
+          "replay_id": "a86ed9eca274447a8ab627272633625f",
+          "type": "replay"
+        },
+        "trace": {
+          "trace_id": "2ff87f5dc5824c9d81c9f60224df3d4b",
+          "span_id": "9cf80c2e4a382a01",
+          "status": "unknown",
+          "client_sample_rate": 1,
+          "type": "trace"
+        }
+      },
+      "culprit": "通知公告,1123598815738675202",
+      "debug_meta": {
+        "images": [
+          {
+            "code_file": "http://192.168.0.202:2888/assets/index-B9XPZy4A.js",
+            "debug_id": "02e80821-e640-51ee-acb7-e9f0174d5437",
+            "type": "sourcemap"
+          }
+        ]
+      },
+      "environment": "test",
+      "exception": {
+        "values": [
+          {
+            "type": "Error",
+            "value": "Failed to handle request [GET http://192.168.0.202/blade-desk/notice/list?current=1&size=10]: 404 NOT_FOUND \"No static resource blade-desk/notice/list.\"",
+            "stacktrace": {
+              "frames": [
+                {
+                  "function": "<anonymous>",
+                  "module": "src/axios",
+                  "filename": "../../src/axios.js",
+                  "abs_path": "http://192.168.0.202:2888/src/axios.js",
+                  "lineno": 205,
+                  "colno": 29,
+                  "pre_context": [
+                    "    if (status !== 200) {",
+                    "      ElMessage({",
+                    "        message: message,",
+                    "        type: 'error',",
+                    "      });"
+                  ],
+                  "context_line": "      return Promise.reject(new Error(message));",
+                  "post_context": [
+                    "    }",
+                    "",
+                    "    // 解析加密报文",
+                    "    if (cryptoData) {",
+                    "      res.data = JSON.parse(crypto.decryptAES(res.data, crypto.aesKey));"
+                  ],
+                  "in_app": true,
+                  "data": {
+                    "sourcemap": "http://192.168.0.202:2888/assets/index-B9XPZy4A.js.map",
+                    "client_in_app": true,
+                    "resolved_with": "debug-id",
+                    "sourcemap_origin": {
+                      "bundled": [
+                        "sentry://project_debug_file/artifact_bundle/347530694",
+                        {
+                          "source_map": {
+                            "abs_path": "http://192.168.0.202:2888/assets/index-B9XPZy4A.js.map",
+                            "debug_id": "02e80821-e640-51ee-acb7-e9f0174d5437"
+                          }
+                        }
+                      ]
+                    },
+                    "symbolicated": true
+                  }
+                }
+              ]
+            },
+            "raw_stacktrace": {
+              "frames": [
+                {
+                  "filename": "/assets/index-B9XPZy4A.js",
+                  "abs_path": "http://192.168.0.202:2888/assets/index-B9XPZy4A.js",
+                  "lineno": 36,
+                  "colno": 148383,
+                  "pre_context": [
+                    "{snip} repeat(\" \",5+i1e*2))+(Array.isArray(n1e)?`${formatComponentName(n1e[0])}... (${n1e[1]} recursive calls)`:formatComponentName(n1e))}`).join(`",
+                    "`)}`}return`",
+                    "",
+                    "{snip} 1e){return{line:zP,column:$P,offset:e1e}}function createLocation(zP,$P,e1e){return{start:zP,end:$P}}const CHAR_SP=\" \",CHAR_CR=\"\\r\",CHAR_LF=`",
+                    "{snip} mal\",t1e=isString($P.filename)?$P.filename:\"message.intl\",n1e=!!$P.sourceMap,i1e=$P.breakLineCode!=null?$P.breakLineCode:e1e===\"arrow\"?\";\":`"
+                  ],
+                  "context_line": "{snip} enHeader]=n1e?\"crypto \"+crypto$1.encryptAES(a1e,crypto$1.cryptoKey):\"bearer \"+a1e),i1e){if(zP.params){const o1e=crypto$1.encryptAES(JSON.str {snip}",
+                  "post_context": [
+                    "{snip} rts.default=i1e.exports},function(i1e,a1e){i1e.exports=function(){throw new TypeError(`Invalid attempt to destructure non-iterable instance.",
+                    "{snip} (\"el-row\");return Object(kh.openBlock)(),Object(kh.createElementBlock)(\"div\",{class:Object(kh.normalizeClass)(f1e.b())},[Object(kh.createVNo {snip}",
+                    "      position:`.concat(W0e?\"absolute\":\"fixed\",`;",
+                    "      top:0;",
+                    "      left:0;"
+                  ],
+                  "in_app": true,
+                  "data": {
+                    "client_in_app": true
+                  }
+                }
+              ]
+            },
+            "mechanism": {
+              "type": "auto.browser.global_handlers.onunhandledrejection",
+              "handled": false
+            }
+          }
+        ]
+      },
+      "fingerprint": [
+        "{{ default }}"
+      ],
+      "grouping_config": {
+        "enhancements": "KLUv_SAd6QAAkwORuGFsbC1wbGF0Zm9ybXM6MjAyMy0wMS0xMZA#KLUv_SAd6QAAkwORuGFsbC1wbGF0Zm9ybXM6MjAyMy0wMS0xMZA#KLUv_SAd6QAAkwORuGFsbC1wbGF0Zm9ybXM6MjAyMy0wMS0xMZA",
+        "id": "newstyle:2023-01-11"
+      },
+      "hashes": [
+        "940ee77ec502b1bd23d47b101ed14e66"
+      ],
+      "ingest_path": [
+        {
+          "version": "25.12.1",
+          "public_key": "XE7QiyuNlja9PZ7I9qJlwQotzecWrUIN91BAO7Q5R38"
+        }
+      ],
+      "key_id": "5122330",
+      "level": "error",
+      "location": "../../src/axios.js",
+      "logger": "",
+      "metadata": {
+        "filename": "../../src/axios.js",
+        "function": "<anonymous>",
+        "in_app_frame_mix": "in-app-only",
+        "type": "Error",
+        "value": "Failed to handle request [GET http://192.168.0.202/blade-desk/notice/list?current=1&size=10]: 404 NOT_FOUND \"No static resource blade-desk/notice/list.\""
+      },
+      "nodestore_insert": 1768805803.625854,
+      "received": 1768805797.752733,
+      "request": {
+        "url": "http://192.168.0.202:2888/desk/notice",
+        "headers": [
+          [
+            "User-Agent",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"
+          ]
+        ]
+      },
+      "scraping_attempts": [
+        {
+          "status": "not_attempted",
+          "url": "http://192.168.0.202:2888/assets/index-B9XPZy4A.js"
+        },
+        {
+          "status": "not_attempted",
+          "url": "http://192.168.0.202:2888/assets/index-B9XPZy4A.js.map"
+        }
+      ],
+      "sdk": {
+        "name": "sentry.javascript.vue",
+        "version": "10.33.0",
+        "integrations": [
+          "InboundFilters",
+          "FunctionToString",
+          "BrowserApiErrors",
+          "Breadcrumbs",
+          "GlobalHandlers",
+          "LinkedErrors",
+          "Dedupe",
+          "HttpContext",
+          "BrowserSession",
+          "Vue",
+          "BrowserTracing",
+          "Replay"
+        ],
+        "packages": [
+          {
+            "name": "npm:@sentry/vue",
+            "version": "10.33.0"
+          }
+        ],
+        "settings": {
+          "infer_ip": "never"
+        }
+      },
+      "symbolicated_in_app": true,
+      "timestamp": 1768805795.449,
+      "title": "Error: Failed to handle request [GET http://192.168.0.202/blade-desk/notice/list?current=1&size=10]: 404 NOT_FOUND \"No static resource blade-desk/notice/list.\"",
+      "transaction": "通知公告,1123598815738675202",
+      "type": "error",
+      "user": {
+        "geo": {
+          "country_code": "PL",
+          "city": "Sławno",
+          "subdivision": "West Pomerania",
+          "region": "Poland"
+        }
+      },
+      "version": "7",
+      "url": "https://sentry.io/api/0/projects/yunzhi/mes_web/events/f315828a6e7d4d69afb1c68c2c3b3d68/",
+      "web_url": "https://sentry.io/organizations/yunzhi/issues/7197795183/events/f315828a6e7d4d69afb1c68c2c3b3d68/",       
+      "issue_url": "https://sentry.io/api/0/organizations/yunzhi/issues/7197795183/",
+      "issue_id": "7197795183"
+    }
+  },
+  "actor": {
+    "type": "application",
+    "id": "sentry",
+    "name": "Sentry"
+  }
+}
